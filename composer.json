@@ -1,0 +1,22 @@
+{
+    "name": "caffeina-core/twig",
+    "type": "core-bundle",
+    "description": "Twig service for Caffeina Core Views",
+    "keywords": ["core","view","twig"],
+    "homepage": "http://labs.caffeina.co/tech/core",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefano Azzolini",
+            "email": "stefano.azzolini@caffeinalab.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.4",
+	    "twig/twig": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [ "init.php" ]
+    }
+}
