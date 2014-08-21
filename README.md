@@ -17,14 +17,14 @@ View::addFilter('rot13',function($text){
 });
 ```
 
-```
-{{ test|rot13 }}
+```html
+<li>test = {{ test|rot13 }}</li>
 ```
 
 Outputs :
 
 ```
-grfg
+<li>test = grfg</li>
 ```
 
 ### Adding global constants
@@ -35,6 +35,6 @@ View::addGlobals([
   'ASSETS_URL'   => '/site/assets/',
 ]);
 ```
-```
+```html
 <script src="{{ ASSETS_URL }}js/main.js"></script>
 ```
