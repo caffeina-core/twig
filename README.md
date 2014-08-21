@@ -13,7 +13,7 @@ Twig documentation : http://twig.sensiolabs.org/documentation
 
 ```php
 View::addFilter('rot13',function($text){
-  return rot13($text);
+  return str_rot13($text);
 });
 ```
 
