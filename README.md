@@ -17,10 +17,24 @@ View::addFilter('rot13',function($text){
 });
 ```
 
-```jade
+```
 {{ test|rot13 }}
 ```
 
+Outputs :
+
 ```
 grfg
+```
+
+### Adding global constants
+
+```php
+View::addGlobals([
+  'BASE_URL'     => '/site/',
+  'ASSETS_URL'   => '/site/assets/',
+]);
+```
+```
+<script src="{{ ASSETS_URL }}js/main.js"></script>
 ```
