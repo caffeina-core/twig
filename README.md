@@ -23,7 +23,7 @@ View::addFilter('rot13',function($text){
 
 Outputs :
 
-```
+```html
 <li>test = grfg</li>
 ```
 
