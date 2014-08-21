@@ -1,6 +1,15 @@
 Core View Module – Twig
 ====
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/caffeina-core/twig/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/caffeina-core/twig/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/caffeina-core/twig/badges/build.png?b=master)](https://scrutinizer-ci.com/g/caffeina-core/twig/build-status/master)
+[![Total Downloads](https://poser.pugx.org/caffeina-core/twig/downloads.svg)](https://packagist.org/packages/caffeina-core/twig)
+[![Latest Stable Version](https://poser.pugx.org/caffeina-core/twig/v/stable.svg)](https://packagist.org/packages/caffeina-core/twig)
+[![Latest Unstable Version](https://poser.pugx.org/caffeina-core/twig/v/unstable.svg)](https://packagist.org/packages/caffeina-core/twig)
+[![License](https://poser.pugx.org/caffeina-core/twig/license.svg)](https://packagist.org/packages/caffeina-core/twig)
+
+
+
 Twig bridge for [Core](https://github.com/caffeina-core/core) View.
 
 ## Twig
