@@ -31,6 +31,10 @@ class Twig {
       return forward_static_call_array([static::$twig,$n],$p);
     }
 
+    public function render($template,$data=[]){
+        return static::$twig->render($template.'.twig',$data);
+    }
+
     public static function addGlobal($key,$val){
       static::$twig->addGlobal($key,$val);
     }
