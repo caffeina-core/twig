@@ -16,6 +16,7 @@ namespace View;
 class Twig {
     protected static $loader = null;
     protected static $twig = null;
+    const EXTENSION = 'twig';
 
     public function __construct($path,$options=[]){
       static::$loader = new \Twig_Loader_Filesystem($path);
