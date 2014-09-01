@@ -10,11 +10,11 @@ Core View Module – Twig
 
 
 
-Twig bridge for [Core](https://github.com/caffeina-core/core) View.
+[Twig](http://twig.sensiolabs.org) bridge for [Core](https://github.com/caffeina-core/core) View.
 
 ## Twig
 
-Twig documentation : http://twig.sensiolabs.org/documentation
+[Twig](http://twig.sensiolabs.org) documentation : http://twig.sensiolabs.org/documentation
 
 ## Twig Core\View Extras
 
