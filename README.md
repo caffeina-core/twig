@@ -1,4 +1,4 @@
-Core View Module – Twig
+Core – Twig View
 ====
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/caffeina-core/twig/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/caffeina-core/twig/?branch=master)
