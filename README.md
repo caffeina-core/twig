@@ -12,6 +12,20 @@ Core View Module – Twig
 
 [Twig](http://twig.sensiolabs.org) bridge for [Core](https://github.com/caffeina-core/core) View.
 
+## Installation
+
+Add package to your **composer.json**:
+
+```json
+{
+  "require": {
+    "caffeina-core/core": "dev-master",
+    "caffeina-core/twig": "dev-master"
+  }
+}
+```
+
+
 ## Twig
 
 [Twig](http://twig.sensiolabs.org) documentation : http://twig.sensiolabs.org/documentation
