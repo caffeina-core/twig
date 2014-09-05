@@ -38,7 +38,7 @@ class Twig {
     }
     
     public static function exists($path){
-        return is_file(static::$templatePath.$path.EXTENSION);
+        return is_file(static::$templatePath.$path.'.twig');
     }
 
     public static function addGlobal($key,$val){
