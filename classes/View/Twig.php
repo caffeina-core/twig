@@ -15,10 +15,12 @@ namespace View;
 
 class Twig {
     protected static $loader = null;
+    protected static $templatePath = '';
     protected static $twig = null;
     const EXTENSION = 'twig';
 
     public function __construct($path,$options=[]){
+      static::$templatePath = rtrim($path,'/').'/';
       static::$loader = new \Twig_Loader_Filesystem($path);
       static::$twig   = new \Twig_Environment(static::$loader,$options);
     }
@@ -33,6 +35,10 @@ class Twig {
 
     public function render($template,$data=[]){
         return static::$twig->render($template.'.twig',$data);
+    }
+    
+    public static function exists($path){
+        return is_file(static::$templatePath.$path.EXTENSION);
     }
 
     public static function addGlobal($key,$val){
