@@ -52,13 +52,13 @@ class Twig {
     }
 
     public static function addFilter($name,callable $filter){
-      static::$twig->addFilter(new Twig_SimpleFilter($name, $filter));
+      static::$twig->addFilter(new \Twig_SimpleFilter($name, $filter));
     }
 
     public static function addFilters(array $defs){
       foreach ((array)$defs as $key=>$val){
         if (is_callable($val)){
-          static::$twig->addFilter(new Twig_SimpleFilter($key, $val));
+          static::$twig->addFilter(new \Twig_SimpleFilter($key, $val));
         }
       }
     }
