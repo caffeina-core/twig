@@ -61,7 +61,7 @@ View::addGlobals([
 ```html
 <script src="{{ ASSETS_URL }}js/main.js"></script>
 ```
-### Adding a Twig Filter
+### Adding a Twig Function
 
 ```php
 View::addFunction('myFunction',function($a,$b,$c){
