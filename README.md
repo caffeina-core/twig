@@ -19,8 +19,8 @@ Add package to your **composer.json**:
 ```json
 {
   "require": {
-    "caffeina-core/core": "dev-master",
-    "caffeina-core/twig": "dev-master"
+    "caffeina-core/core": "*",
+    "caffeina-core/twig": "*"
   }
 }
 ```
@@ -60,4 +60,21 @@ View::addGlobals([
 ```
 ```html
 <script src="{{ ASSETS_URL }}js/main.js"></script>
+```
+### Adding a Twig Filter
+
+```php
+View::addFunction('myFunction',function($a,$b,$c){
+  return $a + $b + $c;
+});
+```
+
+```html
+Value = <b>{{ myFunction(1,2,3) }}</b>
+```
+
+Outputs :
+
+```html
+Value = <b>6</b>
 ```
