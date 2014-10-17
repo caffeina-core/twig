@@ -55,6 +55,10 @@ class Twig {
       static::$twig->addFilter(new \Twig_SimpleFilter($name, $filter));
     }
 
+    public static function addFunction($name,callable $function){
+      static::$twig->addFunction(new \Twig_SimpleFunction($name, $function));
+    }
+
     public static function addFilters(array $defs){
       foreach ((array)$defs as $key=>$val){
         if (is_callable($val)){
