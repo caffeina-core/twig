@@ -14,15 +14,10 @@ Core – Twig View
 
 ## Installation
 
-Add package to your **composer.json**:
+Install via [composer](https://getcomposer.org/download/):
 
-```json
-{
-  "require": {
-    "caffeina-core/core": "*",
-    "caffeina-core/twig": "*"
-  }
-}
+```bash
+$ composer require caffeina-core/twig -o
 ```
 
 
