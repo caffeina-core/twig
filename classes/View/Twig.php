@@ -13,7 +13,7 @@
 
 namespace View;
 
-class Twig {
+class Twig implements Engine {
     protected static $loader = null;
     protected static $templatePath = '';
     protected static $twig = null;
@@ -41,29 +41,33 @@ class Twig {
         return is_file(static::$templatePath.$path.'.twig');
     }
 
-    public static function addGlobal($key,$val){
-      static::$twig->addGlobal($key,$val);
-    }
-
-    public static function addGlobals(array $defs){
-      foreach ((array)$defs as $key=>$val) {
-        static::$twig->addGlobal($key,$val);
+    public static function addGlobal($key,$val=null){
+      if(is_array($key) || is_object($key)){
+        foreach ((array)$key as $property=>$val) {
+          static::$twig->addGlobal($property, $val);
+        }
+      } else {
+        static::$twig->addGlobal($key, $val);
       }
     }
 
-    public static function addFilter($name,callable $filter){
-      static::$twig->addFilter(new \Twig_SimpleFilter($name, $filter));
-    }
-
-    public static function addFunction($name,callable $function){
-      static::$twig->addFunction(new \Twig_SimpleFunction($name, $function));
-    }
-
-    public static function addFilters(array $defs){
-      foreach ((array)$defs as $key=>$val){
-        if (is_callable($val)){
-          static::$twig->addFilter(new \Twig_SimpleFilter($key, $val));
+    public static function addFilter($name, callable $filter = null){
+      if(is_array($name) || is_object($name)){
+        foreach ((array)$name as $property => $val) {
+          static::$twig->addFilter(new \Twig_SimpleFilter($property, $val));
         }
+      } else {
+        static::$twig->addFilter(new \Twig_SimpleFilter($name, $filter));
+      }
+    }
+
+    public static function addFunction($name, callable $function = null){
+      if(is_array($name) || is_object($name)){
+        foreach ((array)$name as $property => $val) {
+          static::$twig->addFunction(new \Twig_SimpleFunction($property, $val));
+        }
+      } else {
+        static::$twig->addFunction(new \Twig_SimpleFunction($name, $function));
       }
     }
     
