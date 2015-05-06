@@ -19,7 +19,7 @@ class Twig implements Adapter {
     protected static $twig = null;
     const EXTENSION = 'twig';
 
-    public function __construct($path,$options=[]){
+    public function __construct($path=null,$options=[]){
       static::$templatePath = rtrim($path,'/').'/';
       static::$loader = new \Twig_Loader_Filesystem($path);
       static::$twig   = new \Twig_Environment(static::$loader,$options);
