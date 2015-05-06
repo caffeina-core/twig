@@ -13,7 +13,7 @@
 
 namespace View;
 
-class Twig {
+class Twig implements Adapter {
     protected static $loader = null;
     protected static $templatePath = '';
     protected static $twig = null;
