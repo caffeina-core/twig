@@ -4,7 +4,7 @@
  * View\Twig
  *
  * Core\View Twig Bridge.
- * 
+ *
  * @package core
  * @author stefano.azzolini@caffeinalab.com
  * @version 1.0
@@ -34,9 +34,13 @@ class Twig implements Adapter {
     }
 
     public function render($template,$data=[]){
+    	try {
         return static::$twig->render($template.'.twig',$data);
+      } catch(\Exception $e) {
+      	return "<!-- ERROR --><pre class=\"error\"><code>$e</code></pre><!-- /ERROR -->";
+      }
     }
-    
+
     public static function exists($path){
         return is_file(static::$templatePath.$path.'.twig');
     }
@@ -66,5 +70,5 @@ class Twig implements Adapter {
         }
       }
     }
-    
+
 }
